@@ -1,0 +1,23 @@
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 0;
+  white-space: nowrap;
+}
+
+.brand-mark {
+  display: grid;
+  width: 35px;
+  height: 35px;
+  place-items: center;
+  color: white;
+  background: var(--orange);
+  border-radius: 11px;
+}
+
+.brand-accent {
+  color: var(--orange);
+}

@@ -1,0 +1,72 @@
+.placeholder-page {
+  display: grid;
+  min-height: 590px;
+  grid-template-columns: 0.9fr 1fr;
+  align-items: center;
+  gap: 75px;
+  padding-block: 75px;
+}
+
+.placeholder-copy h1 {
+  margin: 22px 0 20px;
+  font-family: var(--display);
+  font-size: clamp(52px, 6vw, 70px);
+  font-weight: 600;
+  line-height: 1.02;
+  letter-spacing: 0;
+}
+
+.placeholder-copy > p {
+  max-width: 410px;
+  margin: 0 0 25px;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.placeholder-art { position: relative; }
+
+.placeholder-art > img {
+  width: 100%;
+  height: 390px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.placeholder-stamp {
+  position: absolute;
+  right: -19px;
+  bottom: 23px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 15px 18px;
+  color: white;
+  background: var(--green);
+  border-radius: 8px;
+  font-size: 9px;
+  font-weight: 700;
+  line-height: 1.35;
+  letter-spacing: 0.7px;
+}
+
+@media (max-width: 900px) {
+  .placeholder-page { gap: 42px; }
+}
+
+@media (max-width: 640px) {
+  .placeholder-page {
+    min-height: 0;
+    grid-template-columns: 1fr;
+    gap: 35px;
+    padding-block: 57px 70px;
+  }
+
+  .placeholder-copy h1 {
+    margin-top: 19px;
+    font-size: clamp(48px, 13vw, 65px);
+  }
+
+  .placeholder-art > img { height: 290px; }
+  .placeholder-stamp { right: -5px; }
+}

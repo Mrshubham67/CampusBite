@@ -1,0 +1,32 @@
+.not-found {
+  display: flex;
+  min-height: 530px;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.not-found-number {
+  color: var(--orange);
+  font-family: var(--display);
+  font-size: 18px;
+}
+
+.not-found h1 {
+  margin: 13px 0;
+  font-family: var(--display);
+  font-size: 50px;
+  font-weight: 600;
+}
+
+.not-found > p {
+  margin: 0 0 24px;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+@media (max-width: 640px) {
+  .not-found { min-height: 460px; }
+  .not-found h1 { font-size: 39px; }
+}
