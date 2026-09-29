@@ -37,7 +37,7 @@ Remove-Variable jwtSecret, envText
 
 For Atlas, create a cluster and database user, allow your development IP under **Network Access**, and copy the Node.js driver URI into `MONGODB_URI`. URL-encode reserved characters in the database username or password.
 
-The client has a separate placeholder file at `client/.env.example`. Optionally copy it to `client/.env.local` to set `VITE_API_URL` for a separately hosted API or `API_PROXY_TARGET` for a different local backend. By default, the client calls same-origin `/api`, and Vite proxies that path to `http://localhost:5000` during development.
+The client has a separate placeholder file at `client/.env.example`. For local development, copy it to `client/.env.local`; its `VITE_API_URL` points to the local backend. For production, replace that value with the deployed Render API base URL including `/api`. The frontend reads this setting directly through `import.meta.env.VITE_API_URL`.
 
 ## Run locally
 
